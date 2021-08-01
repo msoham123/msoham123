@@ -5,7 +5,7 @@
 - 👯 I’m looking to collaborate on interesting open source projects.
 - 🤔 I’m looking for help with implementing LDA instructions.
 - 💬 Ask me about Flutter App Development.
-- 📫 How to reach me: Contact me through the form in my [website](https://msoham123.github.io/). 
+- 📫 How to reach me: Contact me through the form in my [website](https://msoham123.github.io/) or shoot me an email at [msoham123@gmail.com](mailto:msoham123@gmail.com). 
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: My name (Soham) symbolizes independence in [Marathi](https://en.wikipedia.org/wiki/Marathi_language)
 
