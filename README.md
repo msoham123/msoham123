@@ -7,7 +7,7 @@
 - 💬 Ask me about Flutter App Development.
 - 📫 How to reach me: Contact me through the form in my [website](https://msoham123.github.io/). 
 - 😄 Pronouns: He/Him
-- ⚡ Fun fact: My name symbolizes independence in [Marathi](https://en.wikipedia.org/wiki/Marathi_language)
+- ⚡ Fun fact: My name (Soham) symbolizes independence in [Marathi](https://en.wikipedia.org/wiki/Marathi_language)
 
 [![Soham's GitHub stats](https://github-readme-stats.vercel.app/api?username=msoham123&count_private=true&show_icons=true&theme=radical)](https://github.com/msoham123/github-readme-stats)
 
