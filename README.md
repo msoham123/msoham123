@@ -10,3 +10,5 @@
 - ⚡ Fun fact: My name symbolizes independence in [Marathi](https://en.wikipedia.org/wiki/Marathi_language)
 
 [![Soham's GitHub stats](https://github-readme-stats.vercel.app/api?username=msoham123&count_private=true&show_icons=true&theme=radical)](https://github.com/msoham123/github-readme-stats)
+
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=msoham123&layout=compact)](https://github.com/msoham123/github-readme-stats)
