@@ -42,4 +42,19 @@ __MyFolder\/__
 
 And thats all you have to do to "install" git onto your project. 
 
+### Git Clone
+
+What if you want to use an existing repository, like a codebase on github? This is where `git clone` comes into play. You can "clone" a repository onto your computer, allowing you to make edits on it with git.
+
+`git clone <repo url>`
+
+This is just like `git init`, but instead of taking a folder and turning it into a repository, you are downloading your repository from the internet.
+
+After running `git clone https://github.com/msoham123/MyFolder.git` on a computer with no __MyFolder__, these are the contents of the newly created__MyFolder__.
+
+__MyFolder\/__
+
+* __essay.text__
+* __.git__ (this is a hidden file, you won't be able to see it through a file explorer application but if you can run git commands it is there!)
+
 
