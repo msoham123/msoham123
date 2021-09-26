@@ -136,7 +136,7 @@ This might once again seem odd. When I make changes, am I not changing the file 
 
 What `git commit` does is that it takes all of your files (rough drafts) in the staging area, and replaces the old corresponding files in the repository with the new one. This replacement is saved in history as a `commit`, and therefore needs to be assigned a name in order to provide context as to what was changed.
 
-Let's finalize the changes we made to __essay.text__. After running `git status` on repository __MyFolder__ in which we modified __essay.text__, we add our changes and stage them using `git add`. Once the files are staged, we can commit them using `git commit`. I added a title to __essay.text__ so my commit will be as follows:
+Let's finalize the changes we made to __essay.text__. After running `git status` on repository __MyFolder__ in which we modified __essay.text__, we add our changes and stage them using `git add`. Once the files are staged, we can commit them using `git commit`. I added a conclusion paragraph to __essay.text__ so my commit will be as follows:
 
 
  ```
@@ -153,7 +153,10 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 msoham123> git add essay.text
 
-msoham123> git commit -m"Added title"
+msoham123> git commit -m"Added conclusion"
+
+[main 3af59ea] Added conclusion
+ 1 file changed, 73 insertions(+), 19 deletions(-)
 ```
 
-And that's it! Now, the changes we made to essay.text are ready to be committed!
+Notice how committing reminds you what changes have been made to repo. Our changes to __MyFolder__, specifically __essay.text__, are now properly updated in the git repository. Now that we have this down, this is where the fun begins :)
