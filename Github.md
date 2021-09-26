@@ -33,7 +33,7 @@ The first thing you have to do is initialize a `repository`. A repository is bas
 
 This allows you to use the other commands shown below and is the first step you need to do in order to use git. You only need to do this in a specific project ONCE.
 
-After running `git init` on __MyFolder__, these are the contents of __MyFolder__.
+After running `git init` on __MyFolder__, these are the contents of __MyFolder__:
 
 __MyFolder\/__
 
@@ -50,11 +50,35 @@ What if you want to use an existing repository, like a codebase on github? This 
 
 This is just like `git init`, but instead of taking a folder and turning it into a repository, you are downloading your repository from the internet.
 
-After running `git clone https://github.com/msoham123/MyFolder.git` on a computer with no __MyFolder__, these are the contents of the newly created__MyFolder__.
+After running `git clone https://github.com/msoham123/MyFolder.git` on a computer with no __MyFolder__, these are the contents of the newly created __MyFolder__:
 
 __MyFolder\/__
 
 * __essay.text__
 * __.git__ (this is a hidden file, you won't be able to see it through a file explorer application but if you can run git commands it is there!)
+
+### Git Status
+
+Great, so we now have our repository all set up and ready to use! What do we do next? Well, remember that the purpose of git is track changes made to files. There needs to be a way where we can visualize these changes easily. This is where `git status` comes into play.
+
+`git status`
+
+The `git status` command is very straighforward. It displays which files have been modified. So, if you made a bunch of changes to multiple files and don't remember which ones you had changed, `git status` is a command that will show you.
+
+After running `git status` on repository __MyFolder__ in which we modified __essay.text__, this is what is displayed:
+
+`On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        essay.text     
+
+nothing added to commit but untracked files present (use "git add" to track)`
+
+Note how the command shows you untracked (changed) files. In this case, we made changes to __essay.text__, so that is what is shown as untracked.
+
+
+
 
 
