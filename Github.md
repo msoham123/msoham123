@@ -35,10 +35,12 @@ This allows you to use the other commands shown below and is the first step you 
 
 After running `git init` on __MyFolder__, these are the contents of __MyFolder__:
 
-__MyFolder\/__
+``` 
+MyFolder/
 
-* __essay.text__
-* __.git__ (this is a hidden file, you won't be able to see it through a file explorer application but if you can run git commands it is there!)
+* essay.text
+* .git (this is a hidden file, you won't be able to see it through a file explorer app)
+```
 
 And thats all you have to do to "install" git onto your project. 
 
@@ -52,10 +54,12 @@ This is just like `git init`, but instead of taking a folder and turning it into
 
 After running `git clone https://github.com/msoham123/MyFolder.git` on a computer with no __MyFolder__, these are the contents of the newly created __MyFolder__:
 
-__MyFolder\/__
+``` 
+MyFolder/
 
-* __essay.text__
-* __.git__ (this is a hidden file, you won't be able to see it through a file explorer application but if you can run git commands it is there!)
+* essay.text
+* .git (this is a hidden file, you won't be able to see it through a file explorer app)
+```
 
 ### Git Status
 
@@ -67,18 +71,35 @@ The `git status` command is very straighforward. It displays which files have be
 
 After running `git status` on repository __MyFolder__ in which we modified __essay.text__, this is what is displayed:
 
-`On branch main
-Your branch is up to date with 'origin/main'.
+```
+On branch main
+Your branch is up to date with 'origin/main'. 
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
         essay.text     
 
-nothing added to commit but untracked files present (use "git add" to track)`
+nothing added to commit but untracked files present (use "git add" to track)
+```
+ 
 
 Note how the command shows you untracked (changed) files. In this case, we made changes to __essay.text__, so that is what is shown as untracked.
 
+### Git Add
 
+Notice that `git status` told us to use `git add` to track to files, or to "add it". Well, what are we adding it to? Here is a useful graphic to visualize this.
 
+<!-- ![](https://www.edureka.co/blog/wp-content/uploads/2016/11/Git-Architechture-Git-Tutorial-Edureka-2.png)
+ -->
+ 
+ ![](https://git-scm.com/figures/18333fig0106-tn.png)
+ 
+ The changes that we have made reside in our working directory. When you use `git add`, we add our changes to the staging area. Think of the staging area like a rough draft space. We're letting git know that these are our rough drafts. When we are ready to finalize them, we can use `git commit` to permanently modify the repository. 
+ 
+ `git add <file path>`
+ 
+ This might seem a little odd at first. Why do we have to manually stage every change we make? Well, git gives us precise power over what we do. If we made edits to multiple files but only wanted to stage one, we could, and then we would only `git commit` that one change to the file. Git gives the user a lot of control.
+ 
+ 
 
 
