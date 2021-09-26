@@ -27,7 +27,7 @@ __MyFolder\/__
 
 ### Git Init
 
-The first thing you have to do is initialize your `repository`. A repository consists of a special git folder installed in it (.git folder). You can take a project folder that you have and add a git repository using the following command.
+The first thing you have to do is initialize your `repository`. A repository consists of a special git folder (.git folder). You can take a project folder that you have and add a git repository using the following command.
 
 `git init`
 
