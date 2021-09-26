@@ -27,7 +27,7 @@ __MyFolder\/__
 
 ### Git Init
 
-The first thing you have to do is initialize your `repository`. A repository consists of a special git folder installed in it (.git folder). You can take a project folder that you have and add a git repository using the following command.
+The first thing you have to do is initialize a `repository`. A repository is basically your project folder with a special git folder installed in it (.git folder). You can take a project folder that you have and turn it into a repository using the following command.
 
 `git init`
 
@@ -50,7 +50,7 @@ What if you want to use an existing repository, like a codebase on github? This 
 
 `git clone <repo url>`
 
-This is just like `git init`, but instead of taking a folder and adding a repository, you are downloading your folder and repository from the internet.
+This is just like `git init`, but instead of taking a folder and turning it into a repository, you are downloading your repository from the internet.
 
 After running `git clone https://github.com/msoham123/MyFolder.git` on a computer with no __MyFolder__, these are the contents of the newly created __MyFolder__:
 
@@ -87,7 +87,7 @@ Note how the command shows you untracked (changed) files. In this case, we made 
 
 ### Git Add
 
-Notice that `git status` told us to use `git add` to track to files, or to "add it". Well, what are we adding it to? Here is a useful diagram to visualize this.
+Notice that `git status` told us to use `git add` to track to files, or to "add it". Well, what are we adding it to? Here is a useful graphic to visualize this.
 
 <!-- ![](https://www.edureka.co/blog/wp-content/uploads/2016/11/Git-Architechture-Git-Tutorial-Edureka-2.png)
  -->
@@ -99,61 +99,7 @@ Notice that `git status` told us to use `git add` to track to files, or to "add 
  `git add <file path>`
  
  This might seem a little odd at first. Why do we have to manually stage every change we make? Well, git gives us precise power over what we do. If we made edits to multiple files but only wanted to stage one, we could, and then we would only `git commit` that one change to the file. Git gives the user a lot of control.
-
-Here's an example to really drive it in. After running `git status` on repository __MyFolder__ in which we modified __essay.text__, we add our changes and stage them using `git add`:
-
-
- ```
-msoham123> git status
  
-On branch main
-Your branch is up to date with 'origin/main'. 
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        essay.text     
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-msoham123> git add essay.text
-```
-
-And that's it! Now, the changes we made to essay.text are ready to be committed!
-
-
-### Git Commit
-
-It isn't quite clear at first what "commit" means. Status was pretty self-explanatory and so was add. But the way I like to think about `git commit` is that the "commit" signifies that you are committing your change to the repository. In other words, you are telling git that this your final draft.
-
-
-![](https://git-scm.com/figures/18333fig0106-tn.png)
-
-Let's go back to this diagram. We've already established that we have a working directory, the place in which we actually make the changes. Adding files to the staging area is like marking your changes as rough drafts. So committing files is the final step: actually changing your repository and submitting your changes as the final draft.
-
-This might once again seem odd. When I make changes, am I not changing the file itself? Well, you are, but only in the working directory. You need to stage files and commit them in order to actually change the files in the repository.
-
-`git commit -m "<name of commit>"`
-
-What `git commit` does is that it takes all of your files (rough drafts) in the staging area, and replaces the old corresponding files in the repository with the new one. This replacement is saved in history as a `commit`, and therefore needs to be assigned a name in order to provide context as to what was changed.
-
-Let's finalize the changes we made to __essay.text__. After running `git status` on repository __MyFolder__ in which we modified __essay.text__, we add our changes and stage them using `git add`. Once the files are staged, we can commit them using `git commit`. I added a title to __essay.text__ so my commit will be as follows:
-
-
- ```
-msoham123> git status
  
-On branch main
-Your branch is up to date with 'origin/main'. 
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        essay.text     
 
-nothing added to commit but untracked files present (use "git add" to track)
-
-msoham123> git add essay.text
-
-msoham123> git commit -m"Added title"
-```
-
-And that's it! Now, the changes we made to essay.text are ready to be committed!
