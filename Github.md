@@ -281,4 +281,4 @@ msoham123> git pull origin NewBranch
 
 It is a __good__ __practice__ to pull before you push. This is so that you can ignore error messages complaining that your version history is not up-to-date.
 
-What happens if two people work on the same file. One person pushes their changes to the remote, and the second person pulls. Won't their be a conflict? There will be. This is the slightly messy part of git, and also where `git merge` comes into play.
+What happens if two people work on the same file. One person pushes their changes to the remote, and the second person pulls. Won't there be a conflict? There will be. This is the slightly messy part of git, and also where `git merge` comes into play.
