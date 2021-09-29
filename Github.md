@@ -185,19 +185,50 @@ To create a new branch off the one you are on right now, call git branch with th
 msoham123> git branch NewBranch
 ```
 
+### Git Checkout
 
-### Git Push
+So we know what branches are. We know how to make them and display a list of them. But how do we switch from one branch to another. This is what `git checkout` is for. Much like you can switch tabs from one google doc to the next, git checkout lets you switch between branches. It's like resuming from work you stashed away. Even if you check out a different branch, the old branch you were on will always be there.
 
-So we understand that we have a working directory, staging area, and repository. But what about GitHub? Isn't that also our repository but stored on the cloud? 
+`git checkout <existing-branch-name>`
 
-The cloud-based repository stored on sites like GitHub is called the remote repository, or `remote` for short. The diagram we had earlier was a little simple, so here's a more accurate one.
+At this point, I'm sure you've noticed patterns in the git command syntax. We always have git + the action + details needed to commit the action. 
+
+``` 
+// how to checkout a previous branch
+msoham123> git checkout NewBranch
+```
+
+Let's just pretend that I wanted to make another branch named __SohamBranch__ and switch to it. We would ordinarily need two commands, `git branch SohamBranch` and `git checkout SohamBranch`. What if I told you this could be one command?
+
+`git checkout -b <new-branch-name>`
+
+When we add the `-b` flag (kind of like an optional parameter to the command), `git checkout` rather than switching to an existing branch creates a new branch and switches to that branch.
+
+Keep in mind that you cannot have two branches with the same name.
+
+
+
+
+### Git Push (and Remote)
+
+So we understand that we have a working directory, staging area, and repository. We also have branches, each one with its own working directory and staging area. But what about GitHub? Isn't that also our repository but stored on the cloud? 
+
+The cloud-based repository stored on sites like GitHub is called the remote repository, or `remote` for short. The diagram we had earlier was a little simple, so here's a more accurate one. Remote tracking references are a little more complicated and exceed the scope of this guide but are still really useful to understand. Check out this [explanation](https://stackoverflow.com/a/15376709).
+
+Keep in mind that before you push anything, you want to have your remote set up. You can add your remote through the following command:
+
+`git remote add origin <github-url (must end with .git)>`
 
 ![](https://i.redd.it/nm1w0gnf2zh11.png)
 
-Working tree is the same as working directory. 
+Working tree is the same as working directory. So the general idea of remote repositories that you have a local branch and a remote branch. You do all of your standard operations (add, commit) in your local branch. Once that is done, your local branch is ahead in terms of history (because it now has one extra commit/revision). And so you want to update the history (files) of the remote branch to the local branch. This is where `git push` comes into play.
+
+`git push <remote-name (usually origin)> <branch-name>`
+
+So after we are done committing, it's time to push. Let's do this with our __MyFolder__ repository.
 
 ```
-msoham123>  git push origin main
+msoham123>  git push origin NewBranch
 
 Enumerating objects: 10, done.
 Counting objects: 100% (10/10), done.
@@ -207,6 +238,25 @@ Writing objects: 100% (6/6), 1015 bytes | 1015.00 KiB/s, done.
 Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 1 local object.
 To https://github.com/msoham123/msoham123.git
-   edf3d11..4356d8a  main -> main
+   edf3d11..4356d8a  NewBranch -> NewBranch
 
 ```
+
+As long as you get a message similar to the one above, you know that your push has been successful. If you reload the GitHub tab, you will now see your commit there.
+
+What if you had instead seen something like this? 
+
+```
+msoham123> git push origin NewBranch
+
+To https://github.com/msoham123/msoham123.git
+ ! [rejected]        NewBranch -> NewBranch (fetch first)
+error: failed to push some refs to 'https://github.com/msoham123/msoham123.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+This is the error message you will recieve if the remote is ahead in history of the local branch. In other words, the remote has changes/commits/revisions that the local branch does not. In order to retrieve these changes, we need to use a tool called `git pull`.
