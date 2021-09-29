@@ -164,6 +164,27 @@ msoham123> git commit -m"Added conclusion"
 
 Notice how committing reminds you what changes have been made to repo. Our changes to __MyFolder__, specifically __essay.text__, are now properly updated in the git repository. Now that we have this down, this is where the fun begins :)
 
+### Git Branch
+
+Remember how we had our repository. What if we wanted to keep multiple versions of our files in the repository. These "versions" or checkpoints are known as `branches`. It's a lot like making a copy of a Google doc: all the current changes are there, but your new `branch` (copy) has now deviated from the rest of the project. Branches are self contained (unless you do a special something which we'll talk about later). But for our intents right now, branches are copies that share commit history at the time of creation, but changes made afterwards don't get made to the original branch that the new one stems from.
+
+There are two default names for branches when you initialize a repository using Git. You might see master, which is more common, or you might see main (apparently more politically correct).
+
+Branches are a lot like commits, but they are one level higher. Commits are revisions, changes made to files in the history of your repository. Branches are entire copies of the entire codebase. Both serve the function of saving your changes in Git history, just at a different scale.
+
+`git branch`
+
+Calling `git branch` prints out all the branch names present in terminal and tells you which branch you are currently editing.
+
+`git branch <new-branch-name>`
+
+To create a new branch off the one you are on right now, call git branch with the added name parameter just like shown below.
+
+``` 
+// this creates a new branch
+msoham123> git branch NewBranch
+```
+
 
 ### Git Push
 
@@ -175,3 +196,17 @@ The cloud-based repository stored on sites like GitHub is called the remote repo
 
 Working tree is the same as working directory. 
 
+```
+msoham123>  git push origin main
+
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1015 bytes | 1015.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/msoham123/msoham123.git
+   edf3d11..4356d8a  main -> main
+
+```
