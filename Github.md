@@ -166,7 +166,7 @@ Notice how committing reminds you what changes have been made to repo. Our chang
 
 ### Git Branch
 
-Remember how we had our repository. What if we wanted to keep multiple versions of our files in the repository. These "versions" or checkpoints are known as `branches`. It's a lot like making a copy of a Google doc: all the current changes are there, but your new `branch` (copy) has now deviated from the rest of the project. Branches are self contained (unless you do a special something which we'll talk about later). But for our intents right now, branches are copies that share commit history at the time of creation, but changes made afterwards don't get made to the original branch that the new one stems from.
+Remember how we had our repository. What if we wanted to keep multiple versions of our files in the repository. These "versions" or checkpoints are known as `branches`. It's a lot like making a copy of a Google doc: all the current changes are there, but your new `branch` (copy) has now deviated from the rest of the project. Branches are self-contained (unless you do a special something which we'll talk about later). But for our intents right now, branches are copies that share commit history at the time of creation, but changes made afterwards don't get made to the original branch that the new one stems from.
 
 There are two default names for branches when you initialize a repository using Git. You might see master, which is more common, or you might see main (apparently more politically correct).
 
@@ -207,8 +207,6 @@ When we add the `-b` flag (kind of like an optional parameter to the command), `
 Keep in mind that you cannot have two branches with the same name.
 
 
-
-
 ### Git Push (and Remote)
 
 So we understand that we have a working directory, staging area, and repository. We also have branches, each one with its own working directory and staging area. But what about GitHub? Isn't that also our repository but stored on the cloud? 
@@ -218,6 +216,10 @@ The cloud-based repository stored on sites like GitHub is called the remote repo
 Keep in mind that before you push anything, you want to have your remote set up. You can add your remote through the following command:
 
 `git remote add origin <github-url (must end with .git)>`
+
+Here is a quick example:
+
+`git remote add origin https://github.com/msoham123/msoham123.git`
 
 ![](https://i.redd.it/nm1w0gnf2zh11.png)
 
@@ -259,4 +261,24 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-This is the error message you will recieve if the remote is ahead in history of the local branch. In other words, the remote has changes/commits/revisions that the local branch does not. In order to retrieve these changes, we need to use a tool called `git pull`.
+This is the error message you will receive if the remote is ahead in history of the local branch. In other words, the remote has changes/commits/revisions that the local branch does not. In order to retrieve these changes, we need to use a tool called `git pull`.
+
+### Git Pull
+
+Let's go back to the "complicated" diagram. 
+
+![](https://i.redd.it/nm1w0gnf2zh11.png)
+
+Pulling in Git updates the local branch with the latest commits (changes) in the remote branch. An immediate question you might have is: Why are there additional commits in the remote branch? Don't we commit locally and then update the branch? While it is true that the remote branch will always be behind the local branch if you are the one making the changes, what if there are multiple people working on the same branch. A peer could have pushed a commit to the remote, and as a result, your local branch is now behind as the remote branch has a commit that you do not. 
+
+`git pull <remote-name (usually origin)> <branch-name>`
+
+Pulling from the remote will update the local branch with the latest commit.
+
+``` 
+msoham123> git pull origin NewBranch
+```
+
+It is a __good__ __practice__ to pull before you push. This is so that you can ignore error messages complaining that your version history is not up-to-date.
+
+What happens if two people work on the same file. One person pushes their changes to the remote, and the second person pulls. Won't their be a conflict? There will be. This is the slightly messy part of git, and also where `git merge` comes into play.
