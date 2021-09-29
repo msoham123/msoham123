@@ -30,7 +30,7 @@ MyFolder/
 
 ### Git Init
 
-The first thing you have to do is initialize your `repository`. A repository consists of a special git folder installed in it (.git folder). You can take a project folder that you have and add a git repository using the following command.
+The first thing you have to do is initialize your `repository`. A repository consists of a special git folder (.git folder). You can take a project folder that you have and add a git repository using the following command.
 
 `git init`
 
@@ -164,6 +164,7 @@ msoham123> git commit -m"Added conclusion"
 
 Notice how committing reminds you what changes have been made to repo. Our changes to __MyFolder__, specifically __essay.text__, are now properly updated in the git repository. Now that we have this down, this is where the fun begins :)
 
+
 ### Git Push
 
 So we understand that we have a working directory, staging area, and repository. But what about GitHub? Isn't that also our repository but stored on the cloud? 
@@ -173,3 +174,4 @@ The cloud-based repository stored on sites like GitHub is called the remote repo
 ![](https://i.redd.it/nm1w0gnf2zh11.png)
 
 Working tree is the same as working directory. 
+
