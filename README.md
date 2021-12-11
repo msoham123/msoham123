@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 🔭 I’m currently working on a CHIP-8 Emulator.
+- 🔭 I’m currently writing a renderer using Swift and Metal.
 - 🌱 I’m currently learning Graphics Programming.
 - 👯 I’m looking to collaborate on interesting open source projects.
 - 🤔 I’m looking for help with the Metal API.
