@@ -1,11 +1,11 @@
 ### Hi there 👋
 
-- 🔭 I’m currently working on Neuron, an education platform.
-- 🌱 I’m currently learning C++ and CPU architecture.
+- 🔭 I’m currently working on a CHIP-8 Emulator.
+- 🌱 I’m currently learning Graphics Programming.
 - 👯 I’m looking to collaborate on interesting open source projects.
-- 🤔 I’m looking for help with understanding Machine Language (learning at the moment)
+- 🤔 I’m looking for help with the Metal API.
 - 💬 Ask me about Flutter App Development.
-- 📫 How to reach me: Contact me through the form in my [website](https://msoham123.github.io/) or shoot me an email at [msoham123@gmail.com](mailto:msoham123@gmail.com). 
+- 📫 How to reach me: Contact me through the form in my [website](https://msoham123.github.io/).
 - 😄 Pronouns: He/Him/His
 - ⚡ Fun fact: My name (Soham) symbolizes independence in [Marathi](https://en.wikipedia.org/wiki/Marathi_language)
 
