@@ -3,7 +3,7 @@
 - 🔭 I’m currently writing a renderer using Swift and Metal.
 - 🌱 I’m currently learning Graphics Programming.
 - 👯 I’m looking to collaborate on interesting open source projects.
-- 🤔 I’m looking for help with the Metal API.
+- 🤔 I’m looking for help with the Metal API and low level emulation.
 - 💬 Ask me about Flutter App Development.
 - 📫 How to reach me: Contact me through the form in my [website](https://msoham123.github.io/).
 - 😄 Pronouns: He/Him/His
