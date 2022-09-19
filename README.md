@@ -1,7 +1,7 @@
 ### Hi there 👋
 
-- 🔭 I’m currently writing a renderer using Swift and Metal.
-- 🌱 I’m currently learning Graphics Programming.
+- 🔭 I’m currently writing a basic compiler using Java.
+- 🌱 I’m currently learning Graphics Programming and about Compilers.
 - 👯 I’m looking to collaborate on interesting open source projects.
 - 🤔 I’m looking for help with the Metal API and low level emulation.
 - 💬 Ask me about Flutter App Development.
