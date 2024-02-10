@@ -1,12 +1,8 @@
 ### Hi there 👋
 
-- 🔭 I’m currently learning about a bunch of topics in school.
-- 👯 I’m looking to collaborate on interesting open source projects.
-- 🤔 I’m looking for help with the Metal API and low level emulation.
-- 💬 Ask me about Flutter App Development.
-- 📫 How to reach me: Contact me through the form in my [website](https://msoham123.github.io/).
+- 🔭 I’m currently learning about computer architecture and MVM accelerators.
+- 💪 I’m looking to collaborate on interesting open source projects.
 - 😄 Pronouns: He/Him/His
-- ⚡ Fun fact: My name (Soham) symbolizes independence in [Marathi](https://en.wikipedia.org/wiki/Marathi_language)
 
  <!--[![Soham's GitHub stats](https://github-readme-stats.vercel.app/api?username=msoham123&count_private=true&show_icons=true&theme=radical)](https://github.com/msoham123/msoham123)-->
 
